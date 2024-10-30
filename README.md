@@ -16,7 +16,7 @@ This is a Flask-based API that provides predictions for credit card approval usi
    Clone this repository to your local machine.
 
    ```bash
-   git clone https://github.com/username/repository.git
+   git clone https://github.com/ziadwaelai/Credit-Card-Approval
    ```
 
 2. **Create a Virtual Environment**:
@@ -38,7 +38,7 @@ This is a Flask-based API that provides predictions for credit card approval usi
    After setting up the environment, you can run the Flask API server.
 
    ```bash
-   python app.py
+   python server.py
    ```
 
    The API will start and listen on `http://127.0.0.1:5000/`.
@@ -68,9 +68,9 @@ The request body should be a JSON object with the following keys:
 {
   "Num_Children": [1, 2],
   "Gender": ["Male", "Female"],
-  "Income": [45000, 65000],
+  "Income": [75000, 65000],
   "Own_Car": ["Yes", "No"],
-  "Own_Housing": ["No", "Yes"]
+  "Own_Housing": ["Yes", "Yes"]
 }
 ```
 
@@ -124,7 +124,7 @@ The API includes error handling for common issues:
 
 ## Project Components
 
-### `app.py`
+### `server.py`
 
 - **Model Loading**: Loads a pre-trained XGBoost model (`credit_card_model.json`) and a scaler (`scaler.pkl`) once during server startup.
 - **Endpoints**:
@@ -172,5 +172,3 @@ The input data undergoes several transformations before being passed to the mode
 - **Deployment**: This API can be deployed to production on platforms like Heroku or AWS for real-world usage.
 
 --- 
-
-This documentation provides an overview of the API, setup instructions, endpoint details, and an outline of the data preprocessing steps used. Let me know if there are specific details you'd like added!
